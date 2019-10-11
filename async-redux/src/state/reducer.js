@@ -12,3 +12,16 @@ export const randomReducer = (state = initialValue, action) => {
             return state
     }
 }
+
+const initialPlayerList = {}
+export const playersReducer = (state = initialPlayerList, action) => {
+    switch (action.type) {
+        case actionTypes.ADD_PLAYERS:
+            return {
+                players: action.payload
+            }
+    
+        default:
+            return state;
+    }
+}
