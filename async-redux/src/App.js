@@ -7,12 +7,14 @@ import { Provider } from "react-redux";
 
 import './App.css';
 import Counter from './components/Counter';
+import PlayerList from './components/PlayerList';
 
 
 
 function App() {
   const rootReducer = combineReducers({
-    count: reducers.randomReducer
+    count: reducers.randomReducer,
+    players: reducers.playersReducer,
   })
   
   const store = createStore(
@@ -30,6 +32,7 @@ function App() {
   <Provider store={store} >
       <div className="App">
      <Counter a={""} />
+     <PlayerList />
     </div>
   </Provider>
   );
