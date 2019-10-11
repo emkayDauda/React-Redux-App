@@ -12,9 +12,9 @@ export const PlayerList = props => {
     }, [] )
     
     return (
-        <div>
+        <div style={{'display': 'flex', 'flexWrap': 'wrap'}}>
             {
-                players.map(player => <Player player = {player} />)
+                players.slice(0, 100).map(player => <Player player = {player} />)
             }
         </div>
     )
